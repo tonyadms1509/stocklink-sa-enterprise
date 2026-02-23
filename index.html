@@ -1,111 +1,59 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>StockLink Ferrari</title>
-</head>
-<body>
-  <h1>Welcome to StockLink ✅</h1>
-  <p>South Africa’s fastest‑growing promoter platform</p>
+<!-- Supabase Script -->
+<script type="module">
+  import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"
 
-  <!-- Waitlist -->
-  <h2>Join the Waitlist</h2>
-  <input type="email" id="waitlistEmail" placeholder="Enter your email">
-  <button onclick="joinWaitlist()">Join Waitlist</button>
+  // ✅ Use your actual Supabase project URL and anon key
+  const supabaseUrl = "https://skptdtrduxzcijitemty.supabase.co"
+  const supabaseKey = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkaXdmZmVjZHRjam9keGxtdmp6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5NjI0NjcsImV4cCI6MjA4MTUzODQ2N30.zRBiACPJfc0fkvBs6eYEbVkMjk8Yko3vzlvCGWTFTs"
+  const supabase = createClient(supabaseUrl, supabaseKey)
 
-  <!-- Sign Up -->
-  <h2>Create Account</h2>
-  <input type="email" id="signupEmail" placeholder="Email">
-  <input type="password" id="signupPassword" placeholder="Password">
-  <button onclick="signup()">Sign Up</button>
+  // Waitlist
+  async function joinWaitlist() {
+    const email = document.querySelector("#waitlistEmail").value
+    const { error } = await supabase.from("waitlist").insert([{ email }])
+    if (error) {
+      alert("Error: " + error.message)
+    } else {
+      alert("You’ve joined the waitlist!")
+    }
+  }
 
-  <!-- Login -->
-  <h2>Login</h2>
-  <input type="email" id="loginEmail" placeholder="Email">
-  <input type="password" id="loginPassword" placeholder="Password">
+  // Signup
+  async function signup() {
+    const email = document.querySelector("#signupEmail").value
+    const password = document.querySelector("#signupPassword").value
+    const { error } = await supabase.auth.signUp({ email, password })
+    if (error) {
+      alert("Signup error: " + error.message)
+    } else {
+      alert("Signup successful! Please check your email to confirm.")
+    }
+  }
 
-  <!-- Role selector -->
-  <select id="roleSelect">
-    <option value="contractor">Contractor</option>
-    <option value="supplier">Supplier</option>
-    <option value="logistics">Logistics</option>
-    <option value="admin">Admin</option>
-  </select>
+  // Login with role-based redirect
+  async function login() {
+    const email = document.querySelector("#loginEmail").value
+    const password = document.querySelector("#loginPassword").value
+    const role = document.querySelector("#roleSelect").value
 
-  <button onclick="login()">Login</button>
+    const { error } = await supabase.auth.signInWithPassword({ email, password })
 
-  <!-- Client Subscriptions (info only for now) -->
-  <h2>Client Subscriptions</h2>
-  <p>👷 Contractor Plan — R199/month</p>
-  <p>🚚 Logistics Plan — R399/month</p>
-  <p>🏭 Supplier Plan — R499/month</p>
-  <p><em>Subscription payments coming soon. For now, register and explore the app.</em></p>
+    if (error) {
+      alert("Login error: " + error.message)
+    } else {
+      alert("Login successful! Redirecting to your dashboard...")
 
-  <!-- Navigation -->
-  <nav>
-    <a href="contractor.html">Contractor</a> |
-    <a href="supplier.html">Supplier</a> |
-    <a href="logistics.html">Logistics</a> |
-    <a href="admin.html">Admin</a>
-  </nav>
-
-  <!-- Supabase Script -->
-  <script type="module">
-    import { createClient } from "https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm"
-
-    const supabaseUrl = "https://skptdtrduxzcijitemty.supabase.co"
-    const supabaseKey = "YOUR_ANON_KEY"   // eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImFkaXdmZmVjZHRjam9keGxtdmp6Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5NjI0NjcsImV4cCI6MjA4MTUzODQ2N30.zRBiACPJfc0fkvBs6eYEbVkMjk8Yko3vzlvCGWTFT
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
-    // Waitlist
-    async function joinWaitlist() {
-      const email = document.querySelector("#waitlistEmail").value
-      const { error } = await supabase.from("waitlist").insert([{ email }])
-      if (error) {
-        alert("Error: " + error.message)
+      if (role === "contractor") {
+        window.location.href = "contractor.html"
+      } else if (role === "supplier") {
+        window.location.href = "supplier.html"
+      } else if (role === "logistics") {
+        window.location.href = "logistics.html"
+      } else if (role === "admin") {
+        window.location.href = "admin.html"
       } else {
-        alert("You’ve joined the waitlist!")
+        window.location.href = "index.html"
       }
     }
-
-    // Signup
-    async function signup() {
-      const email = document.querySelector("#signupEmail").value
-      const password = document.querySelector("#signupPassword").value
-      const { error } = await supabase.auth.signUp({ email, password })
-      if (error) {
-        alert("Signup error: " + error.message)
-      } else {
-        alert("Signup successful! Please check your email to confirm.")
-      }
-    }
-
-    // Login with role-based redirect
-    async function login() {
-      const email = document.querySelector("#loginEmail").value
-      const password = document.querySelector("#loginPassword").value
-      const role = document.querySelector("#roleSelect").value
-
-      const { error } = await supabase.auth.signInWithPassword({ email, password })
-
-      if (error) {
-        alert("Login error: " + error.message)
-      } else {
-        alert("Login successful! Redirecting to your dashboard...")
-
-        if (role === "contractor") {
-          window.location.href = "contractor.html"
-        } else if (role === "supplier") {
-          window.location.href = "supplier.html"
-        } else if (role === "logistics") {
-          window.location.href = "logistics.html"
-        } else if (role === "admin") {
-          window.location.href = "admin.html"
-        } else {
-          window.location.href = "index.html"
-        }
-      }
-    }
-  </script>
-</body>
-</html>
+  }
+</script>
