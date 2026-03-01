@@ -1,0 +1,20 @@
+{
+  "dashboard": {
+    "metrics": {
+      "gridFlux": "R14.2M",
+      "liveNodes": 842,
+      "syncLatency": "1.2ms"
+    },
+    "promoters": [
+      { "id": "P001", "name": "Alpha Logistics", "rollbacks": 15 },
+      { "id": "P002", "name": "Beta Contractors", "rollbacks": 12 },
+      { "id": "P003", "name": "Gamma Supply", "rollbacks": 8 }
+    ],
+    "trends": [
+      { "month": "Nov", "rollbacks": 18 },
+      { "month": "Dec", "rollbacks": 32 },
+      { "month": "Jan", "rollbacks": 45 },
+      { "month": "Feb", "rollbacks": 67 }
+    ]
+  }
+}

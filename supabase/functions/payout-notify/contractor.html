@@ -1,18 +1,115 @@
-contractor.html
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contractor | StockLink Ferrari</title>
+  <title>Contractor Dashboard | StockLink Ferrari</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background: #f9f9f9;
+    }
+    h1, h2 {
+      color: #c00; /* Ferrari red */
+    }
+    button {
+      display: block;
+      margin: 10px 0;
+      padding: 10px 15px;
+      background: #c00;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #900;
+    }
+    input {
+      padding: 8px;
+      margin-right: 10px;
+    }
+    .status {
+      margin-top: 20px;
+      padding: 10px;
+      background: #eee;
+      border-radius: 5px;
+    }
+    nav a {
+      margin-right: 15px;
+      text-decoration: none;
+      color: #333;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
+
   <h1>👷 Contractor Dashboard</h1>
   <p>Welcome Contractors! Here you can manage your projects, subscribe to the Contractor Plan, and connect with suppliers and logistics partners.</p>
 
   <h2>Subscription</h2>
-  <button onclick="window.open('https://paystack.com/pay/YOUR_CONTRACTOR_LINK','_blank')">Subscribe with Paystack</button>
-  <button onclick="window.open('https://www.paypal.com/cgi-bin/webscr?cmd=_xclick-subscriptions&business=YOUR_PAYPAL_EMAIL&item_name=Contractor+Plan&a3=199&p3=1&t3=M&currency_code=ZAR','_blank')">Subscribe with PayPal</button>
+  <button onclick="subscribePaystack()">Subscribe with Paystack</button>
+  <button onclick="subscribePaypal()">Subscribe with PayPal</button>
+  <button onclick="subscribeOzow()">Subscribe with Ozow (Bank EFT)</button>
+  <button onclick="subscribeYoco()">Subscribe with Yoco (Card Payment)</button>
 
-  <p><a href="index.html">⬅ Back to Home</a></p>
+  <div>
+    <input type="text" id="voucherCode" placeholder="Enter voucher code">
+    <button onclick="redeemVoucher()">Redeem Voucher</button>
+  </div>
+
+  <div class="status" id="subscriptionStatus">
+    Subscription Status: Inactive
+  </div>
+
+  <nav>
+    <a href="index.html">⬅ Back to Home</a>
+    <a href="supplier.html">➡ Supplier Dashboard</a>
+    <a href="logistics.html">➡ Logistics Dashboard</a>
+  </nav>
+
+  <script>
+    function subscribePaystack() {
+      window.location.href = "https://paystack.com/pay/YOUR_CHECKOUT_ID";
+    }
+
+    function subscribePaypal() {
+      window.location.href = "https://www.paypal.com/checkoutnow?token=YOUR_TOKEN";
+    }
+
+    function subscribeOzow() {
+      window.location.href = "https://pay.ozow.com/?merchant_id=YOUR_ID&amount=PLAN_AMOUNT";
+    }
+
+    function subscribeYoco() {
+      window.location.href = "https://pay.yoco.com/YOUR_CHECKOUT_ID";
+    }
+
+    function redeemVoucher() {
+      const code = document.getElementById("voucherCode").value;
+      fetch("/api/redeem-voucher", {
+        method: "POST",
+        body: JSON.stringify({ voucher: code }),
+        headers: { "Content-Type": "application/json" }
+      })
+      .then(res => res.json())
+      .then(data => {
+        if (data.success) {
+          document.getElementById("subscriptionStatus").innerText = "Subscription Status: Active (Voucher)";
+          alert("Subscription activated!");
+        } else {
+          alert("Invalid voucher code, please try again.");
+        }
+      })
+      .catch(err => {
+        alert("Error redeeming voucher: " + err.message);
+      });
+    }
+  </script>
+
 </body>
 </html>
+
