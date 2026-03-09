@@ -1,0 +1,64 @@
+[35mCLOUDFLARE_PROTOCOL.md[m[36m:[m# StockLink [1;31mFerrari[m | Cloudflare Pages Protocol (v110.0)
+[35mDEPLOYMENT_GUIDE.md[m[36m:[m# StockLink [1;31mFerrari[m | Cloudflare Pages Deployment Protocol
+[35mDEPLOYMENT_GUIDE.md[m[36m:[m- **Project Name**: `stocklink-[1;31mferrari[m`
+[35mGO_LIVE_GUIDE.md[m[36m:[m# StockLink [1;31mFerrari[m | Go-Live Protocol (v80.5)
+[35mGO_LIVE_GUIDE.md[m[36m:[m2.  Launch a new project named `StockLink-[1;31mFerrari[m`.
+[35mGO_LIVE_GUIDE.md[m[36m:[m*   Explain that during the "[1;31mFerrari[m Launch Phase," the platform is free for early adopters.
+[35mLAUNCH_CHECKLIST.md[m[36m:[m# StockLink [1;31mFerrari[m | Production Ignition Checklist (v80.5)
+[35mLAUNCH_CHECKLIST.md[m[36m:[m* [ ] Start a new project: `StockLink-[1;31mFerrari[m`.
+[35mREADME.md[m[36m:[m# StockLink [1;31mFerrari[m Redline v110.0
+[35mSUPABASE_MIGRATION.md[m[36m:[m# StockLink [1;31mFerrari[m | Master SQL Schema
+[35mVERCEL_IGNITION.md[m[36m:[m# StockLink [1;31mFerrari[m | Vercel Deployment Protocol (v80.5.4)
+[35mVERCEL_INSTRUCTIONS.md[m[36m:[m# StockLink [1;31mFerrari[m | Vercel Deployment Settings
+[35mVERCEL_INSTRUCTIONS.md[m[36m:[mTo ensure the high-performance StockLink [1;31mFerrari[m Redline HUD functions correctly on Vercel, use the following dashboard settings.
+[35mVERCEL_LOGISTICS.md[m[36m:[m# StockLink [1;31mFerrari[m | Vercel Deployment Protocol
+[35mVERCEL_LOGISTICS.md[m[36m:[mVercel serves assets via CDN. The `sw.js` (Service Worker) will cache the [1;31mFerrari[m Redline HUD for offline use on South African job sites with unstable connectivity.
+[35mcomponents/AIProjectReporter.tsx[m[36m:[m            const systemInstruction = `You are a professional project manager using StockLink [1;31mFerrari[m. 
+[35mcomponents/Footer.tsx[m[36m:[m                            <span className="text-2xl font-black italic uppercase tracking-tighter text-white">StockLink <span className="text-red-600">[1;31mFerrari[m</span></span>
+[35mcomponents/Header.tsx[m[36m:[m      <h1>StockLink [1;31mFerrari[m Redline v110</h1>
+[35mcomponents/LaunchCelebration.tsx[m[36m:[m                        <p className="mt-8 text-slate-500 font-black uppercase tracking-[0.5em] text-sm">StockLink [1;31mFerrari[m Production v62.2 Active</p>
+[35mcomponents/LaunchCelebration.tsx[m[36m:[m                Terminal Auth Key: [1;31mFERRARI[m_G7_PRODUCTION_ZA
+[35mcomponents/PlanAnnotatorModal.tsx[m[36m:[m    const [color, setColor] = useState('#DC0000'); // [1;31mFerrari[m Red
+[35mcomponents/SubscriptionModal.tsx[m[36m:[m      {/* Decorative [1;31mFerrari[m Elements */}
+[35mcomponents/VehicleInspectionModal.tsx[m[36m:[m                        <span className="text-[8px] font-black uppercase tracking-widest">[1;31mFerrari[m Protocol Sync v80.5</span>
+[35mhooks/useAuth.tsx[m[36m:[mconst USER_SESSION_KEY = 'stocklink_[1;31mferrari[m_master_session_v110';
+[35mhooks/useAuth.tsx[m[36m:[m        activeCompanyId: 'comp-777-[1;31mferrari[m',
+[35mhooks/useAuth.tsx[m[36m:[m        company: '[1;31mFerrari[m Redline Construction',
+[35mhooks/useAuth.tsx[m[36m:[m        id: 'comp-777-[1;31mferrari[m',
+[35mhooks/useAuth.tsx[m[36m:[m        name: '[1;31mFerrari[m Redline Construction',
+[35mhooks/useAuth.tsx[m[36m:[m            email: 'ops@[1;31mferrari[m-redline.co.za',
+[35mhooks/useAuth.tsx[m[36m:[m            website: 'www.[1;31mferrari[m-redline.co.za',
+[35mhooks/useAuth.tsx[m[36m:[m    if (pwd === '[1;31mferrari[m' || pwd === 'demo') {
+[35mhooks/useCurrency.tsx[m[36m:[mconst CURRENCY_STORAGE_KEY = 'stocklink_[1;31mferrari[m_currency_v110';
+[35mpages/LandingPage.tsx[m[36m:[m                        onClick={() => login('contractor@stocklink.io', '[1;31mferrari[m')}
+[35mpages/LandingPage.tsx[m[36m:[m                        onClick={() => login('supplier@stocklink.io', '[1;31mferrari[m')}
+[35mpages/LandingPage.tsx[m[36m:[m                        onClick={() => login('logistics@stocklink.io', '[1;31mferrari[m')}
+[35mpages/LandingPage.tsx[m[36m:[m                <span className="text-[120px] font-black tracking-tighter text-white uppercase italic">[1;31mFERRARI[m</span>
+[35mpages/Login.tsx[m[36m:[m                <span className="text-[10px] font-black text-red-600 uppercase tracking-[0.5em]">[1;31mFerrari[m Redline</span>
+[35mpages/Login.tsx[m[36m:[m      {/* Right Side - Immersive [1;31mFerrari[m Content */}
+[35mpages/admin/AdminDashboard.tsx[m[36m:[m            <div className="[1;31mferrari[m-watermark">GRID COMMAND</div>
+[35mpages/admin/AdminNodeRegistry.tsx[m[36m:[m            <div className="[1;31mferrari[m-watermark">REGISTRY MASTER</div>
+[35mpages/contractor/AISourcingPage.tsx[m[36m:[m            <div className="[1;31mferrari[m-watermark">PLANETARY_GRID</div>
+[35mpages/contractor/ContractorProfilePage.tsx[m[36m:[m                     <span className="font-black text-black italic tracking-tighter uppercase text-xl">StockLink <span className="text-red-600">[1;31mFerrari[m</span></span>
+[35mpages/contractor/ContractorProfilePage.tsx[m[36m:[m            <div className="[1;31mferrari[m-watermark"></div>
+[35mpages/contractor/ContractorView.tsx[m[36m:[m        const hasLaunched = localStorage.getItem('[1;31mferrari[m_v110_launched');
+[35mpages/contractor/ContractorView.tsx[m[36m:[m            localStorage.setItem('[1;31mferrari[m_v110_launched', 'true');
+[35mpages/contractor/ContractorView.tsx[m[36m:[m                <div className="[1;31mferrari[m-watermark"></div>
+[35mpages/contractor/OnSiteCopilotPage.tsx[m[36m:[m                        systemInstruction: `You are Leo, the high-fidelity AI On-Site Copilot for StockLink [1;31mFerrari[m. 
+[35mpages/contractor/ProjectDetailsPage.tsx[m[36m:[m            {/* [1;31mFerrari[m Header */}
+[35mpages/contractor/SiteReporterPage.tsx[m[36m:[m            let systemInstruction = "You are an elite construction audit AI for StockLink [1;31mFerrari[m.";
+[35mpages/contractor/TeamHealthAI.tsx[m[36m:[m             {/* [1;31mFerrari[m Header */}
+[35mpages/driver/DriverView.tsx[m[36m:[m      <div className="[1;31mferrari[m-watermark"></div>
+[35mpages/index.js[m[36m:[m        <h1 style={{ fontSize: "3rem", marginBottom: "20px" }}>🚀 StockLink [1;31mFerrari[m</h1>
+[35mpages/index.js[m[36m:[m        <h2>Why StockLink [1;31mFerrari[m?</h2>
+[35mpages/index.js[m[36m:[m        © 2026 StockLink [1;31mFerrari[m | Contact | About
+[35mpages/logistics/LogisticsView.tsx[m[36m:[m            <div className="[1;31mferrari[m-watermark">FLEET COMMAND</div>
+[35mpages/marketer/MarketerView.tsx[m[36m:[m                contents: `Forge high-fidelity recruitment copy for the StockLink [1;31mFerrari[m construction grid. Target: ${prompt}. Tone: Elite, Strategic, High-Performance. Max 100 words. No markdown.`
+[35mpages/marketer/MarketerView.tsx[m[36m:[m                <div className="[1;31mferrari[m-watermark">EXPANSION_FORCE</div>
+[35mpages/shared/HelpPage.tsx[m[36m:[m                Generate a premium "Technical Operations Manual" article for the StockLink [1;31mFerrari[m Build (v55).
+[35mpages/shared/HelpPage.tsx[m[36m:[m                <span className="text-[120px] font-black tracking-tighter text-slate-900">[1;31mFERRARI[m v55</span>
+[35mpages/shared/NationalPriceWatch.tsx[m[36m:[m      <div className="[1;31mferrari[m-watermark">PRICE_GRID</div>
+[35mpages/shared/SettingsPage.tsx[m[36m:[m                    <p className="text-slate-500 font-mono text-xs mt-1 uppercase tracking-[0.3em]">[1;31mFerrari[m Node v80.4 Settings</p>
+[35mpages/supplier/LogisticsPage.tsx[m[36m:[m            showToast("UNIT REGISTRY INITIALIZED: [1;31mFERRARI[m GRID LIVE", "success");
+[35mpages/supplier/LogisticsPage.tsx[m[36m:[m                            {isNuclearActive ? '[1;31mFERRARI[m LOGISTICS GRID v80.5' : 'Fleet Management Hub v80.5'}
+[35mpages/supplier/LogisticsPage.tsx[m[36m:[m            <div className="[1;31mferrari[m-waterm
