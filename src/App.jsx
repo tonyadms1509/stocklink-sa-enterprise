@@ -1,13 +1,10 @@
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import NavBar from "./components/NavBar";
-import Home from "./pages/Home";
-import Login from "./pages/Login";
-import About from "./pages/About";
-import Contractor from "./pages/Contractor";
 import Supplier from "./pages/Supplier";
-import Logistics from "./pages/Logistics";
+import Contractor from "./pages/Contractor";
+import Landing from "./pages/Landing";
 import Admin from "./pages/Admin";
+import Signup from "./pages/Signup";
 import "./index.css";
 
 function App() {
@@ -17,17 +14,12 @@ function App() {
       <div className="banner">StockLinkSA — Deployment 4</div>
       <div className="tagline">Building trust, step by step</div>
 
-      {/* Navigation */}
-      <NavBar />
-
       {/* Routes */}
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contractor" element={<Contractor />} />
+        <Route path="/" element={<Landing />} />
+        <Route path="/signup" element={<Signup />} />
         <Route path="/supplier" element={<Supplier />} />
-        <Route path="/logistics" element={<Logistics />} />
+        <Route path="/contractor" element={<Contractor />} />
         <Route path="/admin" element={<Admin />} />
       </Routes>
 
