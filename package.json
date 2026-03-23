@@ -6,8 +6,8 @@
   "dev": "vite",
   "build": "npm install --legacy-peer-deps && vite build",
   "preview": "vite preview"
-}
-  },
+},
+  
   "dependencies": {
     "@clerk/clerk-react": "^5.61.4",
     "@supabase/supabase-js": "^2.99.2",
