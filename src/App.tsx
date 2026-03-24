@@ -17,7 +17,7 @@ function App() {
 
       {/* Route definitions */}
       <Routes>
-        <Route path="/" element={<LandingPage />} />
+        
         <Route path="/admin" element={<Admin />} />
         <Route path="/contractor" element={<Contractor />} />
         <Route path="/supplier" element={<SupplierProfile />} />
