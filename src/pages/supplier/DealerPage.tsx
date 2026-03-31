@@ -1,19 +1,19 @@
 import { useUser } from "../../context/UserContext";
 import ForemanNotice from "../../components/ForemanNotice";
 
-const LogisticsPage: React.FC = () => {
+const DealerPage: React.FC = () => {
   const { role } = useUser();
 
   return (
     <div className="user-page">
-      <h1>Logistics Dashboard</h1>
+      <h1>Dealer Dashboard</h1>
       {role === "Foreman" ? (
         <ForemanNotice />
       ) : (
-        <p>Full Logistics features visible to Admin/Manager</p>
+        <p>Full Dealer features visible to Admin/Manager</p>
       )}
     </div>
   );
 };
 
-export default LogisticsPage;
+export default DealerPage;

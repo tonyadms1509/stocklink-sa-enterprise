@@ -1,8 +1,19 @@
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Dashboard from "./Dashboard";
+
 export default function App() {
+  const mockUser = {
+    id: 1,
+    role: "Admin",
+    hasHeardIntro: false,
+  };
+
   return (
-    <div>
-      <h1>Welcome to StockLink SA</h1>
-      <p>Your enterprise stock management solution</p>
-    </div>
-  )
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Dashboard user={mockUser} />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }

@@ -1,0 +1,12 @@
+function playOnboardingAudio(userRole) {
+  let audioFile = "/audio/universal_welcome.mp3"; // default intro
+
+  if (userRole === "Foreman") {
+    audioFile = "/audio/foreman.mp3";
+  } else if (userRole === "Admin") {
+    audioFile = "/audio/admin.mp3";
+  }
+
+  const audio = new Audio(audioFile);
+  audio.play();
+}

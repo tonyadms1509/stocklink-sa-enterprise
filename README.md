@@ -23,4 +23,10 @@ To launch this project on the national production grid:
 
 ---
 
-*Built for South Africa. Transparent, synchronized, and reliable.*
+# 📊 Onboarding Dashboard (Developer Guide)
+
+This dashboard provides a clear, narratable view of onboarding progress across roles.  
+It combines **cards**, **bar chart**, and **pie chart** into one layout for stakeholder confidence.
+
+## 📂 Project Structure
+
