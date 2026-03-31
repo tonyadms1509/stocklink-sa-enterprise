@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 # StockLinkSA Enterprise v110.0
+=======
+<<<<<<< HEAD
+# StockLink Ferrari Redline v110.0
+>>>>>>> cloudflare/main
 
 A unified operating system for the South African construction industry. Connecting contractors, suppliers, and logistics units through a transparent, reliable platform.
 
@@ -22,6 +27,7 @@ To launch this project on the national production grid:
 - **Logistics Dispatch**: Rugged interface for delivery and fleet management.
 
 ---
+<<<<<<< HEAD
 
 # 📊 Onboarding Dashboard (Developer Guide)
 
@@ -30,3 +36,10 @@ It combines **cards**, **bar chart**, and **pie chart** into one layout for stak
 
 ## 📂 Project Structure
 
+=======
+*Precision engineered. Grid synchronized. Built for South Africa.*
+=======
+# stocklink-sa-enterprise
+Connecting Suppliers/Contractors and logistics
+>>>>>>> 256f4c43324be99cac50c5aafe8d0d541dcf0918
+>>>>>>> cloudflare/main
